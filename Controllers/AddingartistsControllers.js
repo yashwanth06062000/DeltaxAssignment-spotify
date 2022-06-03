@@ -1,0 +1,1 @@
+exports.Addartist=((req,res)=>{})
