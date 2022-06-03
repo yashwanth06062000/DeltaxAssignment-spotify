@@ -5,5 +5,4 @@ const router = express.Router();
 
 router.post("/addsong", AddingartistsController.AddArtist);
 
-
 module.exports = router;
