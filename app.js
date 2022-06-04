@@ -1,8 +1,18 @@
 const express=require("express");
 
+const cors=require("cors")
+const bodyparser=require("body-parser")
+
 const app=express();
+app.use(cors())
+// app.use(bodyparser.json())
+app.use(bodyparser.json({limit: '5mb'}))
 
 const database=require("./Utils/databaseconnection")
+
+
+const Artistsroutes=require("./Routes/Artistsroutes")
+const Songroutes=require("./Routes/Songsroutes.js")
 
 
 const Users=require("./Models/Users")
@@ -18,9 +28,13 @@ Users.belongsToMany(Songs,{through:userratings})
 Songs.belongsToMany(Users,{through:userratings})
 
 
+app.use(Artistsroutes)
+app.use(Songroutes)
+
+
 database.sync()
 .then(()=>{
-    app.listen()
+    app.listen(3000)
 })
 .catch(err=>console.log(err))
 

@@ -1,8 +1,11 @@
+const res = require("express/lib/response");
 const Artists = require("../Models/Artists.js");
-
+console.log("in Backend");
 exports.Addartist = (req, res) => {
-  const artistname = req.body.artistname.toLowerCase();
-  const dateofbirth = req.body.dob;
+  const Artistname = req.body.artistname;
+  const artistname = Artistname.toLowerCase();
+
+  const dateofbirth = req.body.dateofbirth;
   const bio = req.body.bio;
   const avgrating = 0;
   const totalsongs = 0;
@@ -24,3 +27,10 @@ exports.Addartist = (req, res) => {
     res.json({ message: "Artist Already Available", Success: true });
   }
 };
+exports.getartists=(async(req,res)=>{
+  Artists.findAll()
+  .then((results)=>{
+    res.json({results})
+
+  })
+})

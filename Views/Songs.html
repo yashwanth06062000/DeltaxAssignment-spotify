@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogs</title>
+    <link rel="stylesheet" href="Songs.css" />
+  </head>
+  <body>
+    <div id="fullpage">
+      <form action="" id="blogs-page">
+        <label for="title">Songs Name:</label>
+        <input type="text" name="title" id="title" /> <br />
+        <label for="dor">Date of Release:</label>
+        <input type="text" name="dor" id="dor" /> <br />
+        <label for="image">Cover image:</label>
+        <input
+          type="file"
+          id="cover"
+          name="image"
+          accept="image/png,image/jpeg"
+          onchange="imageUploaded()"
+        />
+        <select name="artists" id="artists" multiple="multiple"></select>
+
+        <button id="submitbutton">Add Song</button>
+      </form>
+
+      <div id="blog-container"></div>
+    </div>
+    <script src="Songs.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.0/axios.min.js"></script>
+  </body>
+</html>

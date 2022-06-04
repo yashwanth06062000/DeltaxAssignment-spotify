@@ -1,0 +1,78 @@
+
+   
+body {
+    background-image: url("../Background.jpg");
+  
+    font-size: 25px;
+    color: black;
+  }
+  #blogs-page {
+    border-radius: 5px;
+    flex: 25%;
+  
+    color: black;
+    margin: 0px;
+  }
+  .blogdiv {
+    border: 3px solid black;
+    border-radius: 5px;
+  
+    color: white;
+    margin: 3rem;
+  }
+  .title {
+    display: block;
+    background-color: rgb(69, 225, 228);
+    color: black;
+  }
+  .dob {
+    display: block;
+    color: black;
+    height: fit-content;
+  }
+  .author {
+    display: block;
+    color: black;
+  }
+  #blog-container {
+    flex: 60%;
+  }
+  #blogpage {
+    margin: 0px;
+    width: 500px;
+    margin: 0px;
+  }
+  #fullpage {
+    display: flex;
+  }
+  #dor {
+    width: 380px;
+    height: 50px;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 20px;
+  }
+  #title {
+    width: 380px;
+    height: 25px;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 20px;
+  }
+  #bio{
+    width: 380px;
+    height: 25px;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 20px;
+  }
+  #submitbutton {
+    width: 380px;
+    height: 35px;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 25px;
+    background-color: rgb(69, 225, 228);
+    color: black;
+  }
+  

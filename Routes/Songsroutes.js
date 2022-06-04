@@ -1,5 +1,5 @@
 const express = require("express");
-const AddingsongsController = require("../Controllers/AddingsongsController.js");
+const AddingsongsController = require("../Controllers/SongsController.js");
 
 const router = express.Router();
 
