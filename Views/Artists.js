@@ -1,4 +1,5 @@
 const submit = document.getElementById("submitbutton");
+var token = localStorage.getItem("token");
 
 submit.addEventListener("click", (e) => {
   e.preventDefault();
@@ -11,7 +12,9 @@ submit.addEventListener("click", (e) => {
     bio: bio,
   };
   console.log("in frontend",Artist)
-  axios.post("http://localhost:3000/addartists",Artist).then(() => {
+  axios.post("http://localhost:3000/addartists",Artist,{
+    headers: { Authorization: token },
+  }).then(() => {
     document.getElementById("title").value = "";
     document.getElementById("dob").value = "";
     document.getElementById("bio").value = "";

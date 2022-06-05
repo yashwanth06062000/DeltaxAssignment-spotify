@@ -29,4 +29,40 @@ body {
 }
 .songdiv{
     display:flex;
+    border: 2px solid black;
+}
+.cover{
+    margin: 20px;
+
+}
+.songname{
+    margin: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 200;
+
+}
+.dor{
+    margin: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 200;
+
+}
+.artists{
+    margin: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 200;
+
+}
+.ratings{
+    height: 30px;
+    width: 30;
+    margin: 20px;
+    margin-left: 0px;
+}
+.rating{
+    height: 30px;
+    width: 60px;
+    margin: 20px;
+    margin-left: 0px;
+
 }

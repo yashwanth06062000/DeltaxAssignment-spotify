@@ -1,4 +1,5 @@
 const submit = document.getElementById("submitbutton");
+var token = localStorage.getItem("token");
 
 let base64String = "";
 
@@ -36,7 +37,9 @@ submit.addEventListener("click", (e) => {
     artists: artists,
   };
 
-  axios.post("http://localhost:3000/addsong",Song)
+  axios.post("http://localhost:3000/addsong",Song,{
+    headers: { Authorization: token },
+  })
   .then((res)=>{
     alert(res.data.message)
   })
@@ -44,7 +47,9 @@ submit.addEventListener("click", (e) => {
 });
 
 window.addEventListener("DOMContentLoaded", (event) => {
-  axios.get("http://localhost:3000/getartists").then((artists) => {
+  axios.get("http://localhost:3000/getartists",{
+    headers: { Authorization: token },
+  }).then((artists) => {
     const checkbox = document.getElementById("artists");
     const artist = artists.data.results;
     for (let i = 0; i < artist.length; i++) {

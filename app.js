@@ -14,6 +14,7 @@ const database=require("./Utils/databaseconnection")
 const Artistsroutes=require("./Routes/Artistsroutes")
 const Songroutes=require("./Routes/Songsroutes.js")
 const Publicroutes=require("./Routes/publicroutes")
+const auth=require("./Controllers/Auth.js")
 
 
 const Users=require("./Models/Users")
@@ -29,6 +30,7 @@ Users.belongsToMany(Songs,{through:userratings})
 Songs.belongsToMany(Users,{through:userratings})
 
 app.use(Publicroutes)
+app.use('*', auth.authenticate) 
 app.use(Artistsroutes)
 app.use(Songroutes)
 
