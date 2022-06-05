@@ -1,5 +1,6 @@
 const users = require("../Models/Users.js");
 const jwt = require("jsonwebtoken");
+const encript=require('bcryptjs');
 
 function generateAccessTocken(id) {
   return jwt.sign(
@@ -14,7 +15,7 @@ exports.usersignup = async (req, res) => {
   const password = req.body.password;
   const hashpassword = await encript.hash(password, 10);
   var existinguser = undefined;
-  await users.findAll({ where: { name: name, email: email } }).then((res) => {
+  await users.findAll({ where: { username: name, email: email } }).then((res) => {
     existinguser = res[0];
   });
   if (existinguser == undefined) {

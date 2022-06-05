@@ -13,6 +13,7 @@ const database=require("./Utils/databaseconnection")
 
 const Artistsroutes=require("./Routes/Artistsroutes")
 const Songroutes=require("./Routes/Songsroutes.js")
+const Publicroutes=require("./Routes/publicroutes")
 
 
 const Users=require("./Models/Users")
@@ -27,7 +28,7 @@ Songs.belongsToMany(Artists,{through:artistsongs})
 Users.belongsToMany(Songs,{through:userratings})
 Songs.belongsToMany(Users,{through:userratings})
 
-
+app.use(Publicroutes)
 app.use(Artistsroutes)
 app.use(Songroutes)
 

@@ -1,0 +1,32 @@
+body {
+    background-image: url("../Background.jpg");
+  
+    font-size: 25px;
+    color: black;
+  }
+#nav{
+    width:100%;
+    background-color: black;
+    height:20px;
+} 
+#top10songs{
+    width: 100%;
+    height:fit-content;
+    border: 2px solid black;
+
+} 
+#top10artists{
+    width: 100%;
+    height:fit-content;
+    border: 2px solid black;
+
+}
+#allsongs{
+    width: 100%;
+    height:fit-content;
+    border: 2px solid black;
+
+}
+.songdiv{
+    display:flex;
+}

@@ -37,8 +37,10 @@ submit.addEventListener("click", (e) => {
   };
 
   axios.post("http://localhost:3000/addsong",Song)
-  .then((res)=>{alert(res)})
-  .catch(err=>{console.log(err)})
+  .then((res)=>{
+    alert(res.data.message)
+  })
+  .catch(err=>{alert(err.data.message)})
 });
 
 window.addEventListener("DOMContentLoaded", (event) => {

@@ -10,8 +10,10 @@
   "author": "yashwanth Busetty",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.0",
     "cors": "^2.8.5",
+    "encrypt": "^0.0.1",
     "express": "^4.18.1",
     "image-to-base64": "^2.2.0",
     "jsonwebtoken": "^8.5.1",

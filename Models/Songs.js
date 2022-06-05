@@ -14,7 +14,7 @@ const Songs = db.define("Songs", {
     type: sequelize.STRING,
   },
   coverimage: {
-    type: sequelize.STRING,
+    type: sequelize.TEXT('long'),
   },
   avgrating: {
     type: sequelize.INTEGER,
