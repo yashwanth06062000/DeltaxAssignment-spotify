@@ -15,6 +15,7 @@ const Artistsroutes=require("./Routes/Artistsroutes")
 const Songroutes=require("./Routes/Songsroutes.js")
 const Publicroutes=require("./Routes/publicroutes")
 const auth=require("./Controllers/Auth.js")
+const ratingroutes=require("./Routes/RatingRoutes")
 
 
 const Users=require("./Models/Users")
@@ -33,6 +34,7 @@ app.use(Publicroutes)
 app.use('*', auth.authenticate) 
 app.use(Artistsroutes)
 app.use(Songroutes)
+app.use(ratingroutes)
 
 
 database.sync()
