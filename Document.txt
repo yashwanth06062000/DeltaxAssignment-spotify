@@ -1,0 +1,18 @@
+Added Packages:
+express
+mysql2
+bcrypt
+jasonwebtoken
+sequelize
+body-parser
+cors
+
+
+Validations:
+-when User created It will check weather existing user is tere are not if not it will allow user to create. 
+-after user logged in it will create jwt token which is used for all other operations
+-when user submitted rating it will check weather user already rated or not if not it will allows otherwise it will alrert use already rated.
+-Followed MVC pattren.
+-used sequelize Orm tool to deal with Databases.
+-Developed entire backend in Node js with express framework.
+-Developed frontend in html css and javascript
