@@ -154,3 +154,16 @@ window.addEventListener("DOMContentLoaded",(event)=>{
 
 })
 
+
+
+const songbutton=document.getElementById("Addingsong")
+songbutton.addEventListener("click",(e)=>{
+  window.location.replace('./Songs.html')
+
+})
+const artistbutton=document.getElementById("Addingartist")
+artistbutton.addEventListener("click",(e)=>{
+  window.location.replace('./Artists.html')
+  
+})
+

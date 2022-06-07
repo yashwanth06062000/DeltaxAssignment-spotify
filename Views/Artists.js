@@ -18,5 +18,6 @@ submit.addEventListener("click", (e) => {
     document.getElementById("title").value = "";
     document.getElementById("dob").value = "";
     document.getElementById("bio").value = "";
+    window.location.replace('./Home.html')
   });
 });

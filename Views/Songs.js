@@ -45,6 +45,7 @@ submit.addEventListener("click", (e) => {
     document.getElementById("title").value=""
     document.getElementById("dor").value=""
     document.getElementById("artists").value=""
+    window.location.replace('./Home.html')
   })
   .catch(err=>{alert(err.data.message)})
 });
