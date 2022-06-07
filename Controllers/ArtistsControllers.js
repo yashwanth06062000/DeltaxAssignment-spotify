@@ -51,3 +51,12 @@ exports.getsongartists=(async(req,res)=>{
 
   })
 })
+exports.gettop10artists=async (req,res)=>{
+  Artists.findAll({order: [
+    ['avgrating', 'DESC']
+],limit:10})
+.then((resp)=>{
+  res.json({resp})
+})
+
+}

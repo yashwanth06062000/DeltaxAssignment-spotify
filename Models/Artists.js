@@ -18,8 +18,7 @@ const Artists = db.define("Artists", {
   },
   avgrating: {
     type: sequelize.INTEGER,
-  },
-  totalsongs: { type: sequelize.INTEGER },
+  }
 });
 
 module.exports = Artists;

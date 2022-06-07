@@ -47,7 +47,18 @@ exports.GetSongs=async (req,res)=>{
   await Songs.findAll()
   .then((songs)=>{
     res.json({songs})
+    
 
   })
+
+}
+exports.gettop10songs=async (req,res)=>{
+  Songs.findAll({order: [
+    ['avgrating', 'DESC']
+],limit:10})
+.then((resu)=>{
+  res.json({resu})
+
+})
 
 }

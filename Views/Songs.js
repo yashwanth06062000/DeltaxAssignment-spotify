@@ -42,6 +42,9 @@ submit.addEventListener("click", (e) => {
   })
   .then((res)=>{
     alert(res.data.message)
+    document.getElementById("title").value=""
+    document.getElementById("dor").value=""
+    document.getElementById("artists").value=""
   })
   .catch(err=>{alert(err.data.message)})
 });
